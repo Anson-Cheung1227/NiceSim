@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace NiceSim
 {
@@ -102,6 +103,9 @@ namespace NiceSim
             {
                 buddies.Add(new BadBuddy());
             }
+            Buddy[] temp = buddies.ToArray();
+            Random.Shared.Shuffle(temp);
+            buddies = temp.ToList();
         }
     }
 }
